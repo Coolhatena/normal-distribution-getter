@@ -136,9 +136,8 @@ class App(tk.Tk):
                             if self.valor_minimo.get() < dia < self.valor_maximo.get():
                                 cantidad_numeros_validos += 1
 
-            print(cantidad_numeros_validos)
-            print(cantidad_numeros_validos / CANTIDAD_TOTAL_VALORES)
-            self.solucion.set(cantidad_numeros_validos / CANTIDAD_TOTAL_VALORES)
+            resultado = round((cantidad_numeros_validos / CANTIDAD_TOTAL_VALORES) * 100, 2)
+            self.solucion.set(resultado)
 
 
 if __name__ == '__main__':
